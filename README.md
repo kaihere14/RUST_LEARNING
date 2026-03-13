@@ -1,3 +1,4 @@
+
 # Rust Learning Repository  
 ![Rust](https://img.shields.io/badge/Rust-1.78%2B-orange?logo=rust) ![License](https://img.shields.io/badge/License-MIT-blue) ![GitHub last commit](https://img.shields.io/github/last-commit/kaihere14/RUST_LEARNING)  
 
@@ -37,11 +38,13 @@ All projects target **Rust 2024 edition** and use **Cargo** as the build system.
 ---
 
 ## Features
-- **Zero‑dependency examples** – focus on the standard library.
+- **Zero‑dependency examples** – focus on the standard library (for foundational concepts).
 - **Separate Cargo packages** – each folder is a standalone crate, illustrating multi‑crate repository layout.
 - **Cross‑platform** – works on Windows, macOS, and Linux.
 - **Step‑by‑step comments** in source files to aid newcomers.
 - **Ready‑to‑run** with a single `cargo run` command per example.
+- **Interactive examples** – engage users with input/output scenarios, like the guessing game.
+- **External crate integration** – demonstrates how to incorporate third-party libraries (e.g., `rand` for random number generation).
 
 ---
 
@@ -114,6 +117,7 @@ cargo run -- "Rustacean"
 # 3️⃣ Guessing Game
 cd ../guessing_game
 cargo run
+
 # Follow the interactive prompts.
 ```
 
@@ -124,15 +128,15 @@ All binaries are placed under `target/debug/` after a successful build.
 ## Usage Examples
 
 ### hello_world/main.rs
-```rust
+rust
 fn main() {
     println!("Hello, world!");
 }
-```
+
 Running `cargo run` prints the greeting to STDOUT.
 
 ### hello_cargo/main.rs
-```rust
+rust
 use std::env;
 
 fn main() {
@@ -140,50 +144,48 @@ fn main() {
     let name = args.get(1).map(|s| s.as_str()).unwrap_or("Cargo");
     println!("Hello, {}! Argument received: {}", name, args.len() - 1);
 }
-```
+
 Pass an optional name: `cargo run -- "Alice"` → `Hello, Alice! Argument received: 1`.
 
 ### guessing_game/main.rs
-```rust
+rust
+use std::cmp::Ordering;
 use std::io;
-use rand::Rng; // rand is part of the standard tutorial; add to Cargo.toml if you want randomness.
+use rand::Rng;
 
 fn main() {
-    println!("Guess the number!");
-
-    // Generate a random number between 1 and 100
-    let secret = rand::thread_rng().gen_range(1..=100);
+    println!("Hello doston");
+    let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        println!("Please input your guess.");
-
-        let mut guess = String::new();
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
-
-        // Convert the input string to a number
-        let guess: u32 = match guess.trim().parse() {
+    println!("Enter your number for guess : ");
+    let mut guess = String::new();
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("failed to read");
+    let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                println!("Please type a valid number!");
+                println!("Please enter a valid input");
                 continue;
-            }
+            },
         };
 
-        // Compare guess with the secret number
-        match guess.cmp(&secret) {
-            std::cmp::Ordering::Less => println!("Too small!"),
-            std::cmp::Ordering::Greater => println!("Too big!"),
-            std::cmp::Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
-        }
+    println!("You guessed : {}",guess);
+
+    match guess.cmp(&secret_number){
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => {
+            println!("You win!");
+            break;
+        },
     }
+    }
+
 }
-```
-> **Tip:** The `rand` crate is not listed in `Cargo.toml` for this educational repo. To enable randomness, add `rand = "0.8"` under `[dependencies]` in `guessing_game/Cargo.toml` and run `cargo run`.
+
+This example implements an interactive number guessing game. It generates a random number between 1 and 100, prompts the user for input, and provides feedback (Too small!, Too big!, You win!). The game continues until the correct number is guessed, demonstrating basic I/O, loops, conditional logic, and external crate usage (`rand`).
 
 ---
 
