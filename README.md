@@ -45,9 +45,9 @@ All projects target **Rust 2024 edition** and use **Cargo** as the build system.
 - **Ready‑to‑run** with a single `cargo run` command per example.
 - **Interactive examples** – engage users with input/output scenarios, like the guessing game.
 - **External crate integration** – demonstrates how to incorporate third-party libraries (e.g., `rand` for random number generation).
+- **Core language concepts** – illustrates fundamental Rust features such as variable declaration, immutability, shadowing, and basic data structures like arrays.
 
 ---
-
 ## Tech Stack
 | Component | Version / Details |
 |-----------|-------------------|
@@ -133,6 +133,7 @@ fn main() {
     println!("Hello, world!");
 }
 
+
 Running `cargo run` prints the greeting to STDOUT.
 
 ### hello_cargo/main.rs
@@ -144,6 +145,7 @@ fn main() {
     let name = args.get(1).map(|s| s.as_str()).unwrap_or("Cargo");
     println!("Hello, {}! Argument received: {}", name, args.len() - 1);
 }
+
 
 Pass an optional name: `cargo run -- "Alice"` → `Hello, Alice! Argument received: 1`.
 
@@ -185,10 +187,50 @@ fn main() {
 
 }
 
+
 This example implements an interactive number guessing game. It generates a random number between 1 and 100, prompts the user for input, and provides feedback (Too small!, Too big!, You win!). The game continues until the correct number is guessed, demonstrating basic I/O, loops, conditional logic, and external crate usage (`rand`).
 
----
+### variables/main.rs
+rust
+use std::io;
 
+fn main() {
+    let  x = 5;
+    println!("The value of x is: {}", x);
+    let x = x + 5; // This will cause a compile-time error because x is immutable by default
+    println!("The value of x is: {}", x);
+
+    {
+        let x = x+1;
+        println!("The value of x is : {x}")
+    }
+    println!("The value of x is: {}", x);
+
+    let spaces: &str = "  ";
+    let spaces = spaces.len();
+    println!("{spaces}");
+
+    let a = [1,2,3,4,5];
+    let mut index = String::new();
+    println!("Enter your index : ");
+    io::stdin()
+        .read_line(&mut index)
+        .expect("failed to edit ");
+
+    let index:usize= index
+        .trim()
+        .parse()
+        .expect("please enteer a valid input");
+
+    let element = a[index];
+    println!("Your element is : {element}");
+    
+
+}
+
+This example demonstrates fundamental Rust concepts including variable declaration, shadowing (re-declaring a variable with the same name, which creates a new variable, as seen with `x`), and type inference. It also shows how to declare arrays, handle user input for array indexing, and perform basic error handling for input parsing. Note the comment about immutability, which highlights a common misconception when learning about shadowing versus direct mutation.
+
+---
 ## Development
 
 ### Setting Up a Development Environment
