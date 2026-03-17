@@ -45,9 +45,10 @@ All projects target **Rust 2024 edition** and use **Cargo** as the build system.
 - **Ready‑to‑run** with a single `cargo run` command per example.
 - **Interactive examples** – engage users with input/output scenarios, like the guessing game.
 - **External crate integration** – demonstrates how to incorporate third-party libraries (e.g., `rand` for random number generation).
-- **Core language concepts** – illustrates fundamental Rust features such as variable declaration, immutability, shadowing, and basic data structures like arrays.
+- **Core language concepts** – illustrates fundamental Rust features such as variable declaration, immutability, shadowing, basic data structures like arrays, conditional logic (`if`/`else if`/`else`), and various looping constructs (`loop`, `while`, `for`).
 
 ---
+
 ## Tech Stack
 | Component | Version / Details |
 |-----------|-------------------|
@@ -228,9 +229,77 @@ fn main() {
 
 }
 
+
 This example demonstrates fundamental Rust concepts including variable declaration, shadowing (re-declaring a variable with the same name, which creates a new variable, as seen with `x`), and type inference. It also shows how to declare arrays, handle user input for array indexing, and perform basic error handling for input parsing. Note the comment about immutability, which highlights a common misconception when learning about shadowing versus direct mutation.
 
+### branches/main.rs
+rust
+fn main() {
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+
+     let condition = true;
+    let number = if condition { 5 } else { 6 };
+
+    println!("The value of number is: {number}");
+}
+
+
+This example demonstrates Rust's conditional expressions using `if`, `else if`, and `else` to check divisibility. It also illustrates how `if` can be used as an expression to assign a value to a variable based on a condition.
+
+### loops/main.rs
+rust
+fn main() {
+    let mut counter = 0;
+    let answer = loop {
+        if counter > 5{
+            break counter * 2;
+        };
+        println!("using loop : {counter}");
+        counter += 1;
+        
+    };
+    println!("Final answer! {answer}");
+
+    let mut counter2 = 0;
+    while counter2 != 5{
+        println!("using while : {counter2}");
+        counter2 += 1;
+    }
+
+    let arr = [10, 20, 30, 40, 50];
+    let mut index = 0;
+    while index < 5 {
+        println!("the number : {}",arr[index]);
+        index += 1;
+    }
+ 
+    let arr2 = [15, 25, 35, 45, 55];
+
+    for element in arr2{
+        println!("the number using for loop : {}",element);
+    }
+
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+}
+
+
+This example showcases various looping constructs in Rust. It includes an infinite `loop` with a `break` condition, a `while` loop for conditional iteration, and `for` loops for iterating over collections (arrays) and ranges, demonstrating common patterns for repetitive tasks.
+
 ---
+
 ## Development
 
 ### Setting Up a Development Environment
@@ -297,6 +366,7 @@ Please adhere to the **Rust API Guidelines** and keep the code **idiomatic**.
 Feel free to suggest additional topics by opening an issue.
 
 ---
+
 
 ## License & Credits
 **License:** MIT © 2024 Kai Here. See the `LICENSE` file for full text.
