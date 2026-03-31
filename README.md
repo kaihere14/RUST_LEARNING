@@ -1,3 +1,4 @@
+
 # 🦀 RUST_LEARNING 📚
 
 ![Rust Logo](https://raw.githubusercontent.com/rust-lang/rust/master/src/doc/logos/rust-logo-blk.svg)
@@ -9,7 +10,6 @@ A curated collection of beginner-friendly Rust programming examples, designed to
 [![Rust Edition](https://img.shields.io/badge/Rust%20Edition-2024-orange)](https://blog.rust-lang.org/2024/02/08/Rust-2024-Edition.html)
 
 ---
-
 ## 📖 Overview
 
 This repository serves as a hands-on guide for learning the Rust programming language. It contains a series of small, self-contained projects, each focusing on a specific core concept of Rust. From the classic "Hello, World!" to more complex topics like control flow and external dependencies, these examples are structured to be easy to understand and experiment with.
@@ -28,7 +28,6 @@ This repository serves as a hands-on guide for learning the Rust programming lan
 **Current Status**: This repository is actively maintained with fundamental examples. New topics and refinements will be added over time.
 
 ---
-
 ## ✨ Features
 
 Each directory in this repository represents a distinct Rust project, demonstrating a specific concept.
@@ -63,8 +62,12 @@ Each directory in this repository represents a distinct Rust project, demonstrat
     *   **Concepts**: Input/output (`std::io`), external crates (`rand`), `match` expressions, error handling basics.
     *   **Status**: Stable
 
----
+*   **`practice`**:
+    *   **Description**: A dedicated space for general Rust exercises and experimentation.
+    *   **Concepts**: Syntax practice, logic implementation.
+    *   **Status**: Active
 
+---
 ## 🛠️ Tech Stack
 
 *   **Language**: [Rust](https://www.rust-lang.org/)
@@ -76,37 +79,31 @@ Each directory in this repository represents a distinct Rust project, demonstrat
     *   Version: `0.8.5`
 
 ---
-
 ## 🏗️ Architecture
 
-This repository is structured as a collection of independent Rust projects within a single monorepo-like setup. Each top-level directory (e.g., `hello_world`, `guessing_game`) is its own Cargo package, complete with its own `Cargo.toml` file and `src/main.rs`.
+This repository is structured as a collection of independent Rust projects within a single monorepo-like setup. Each top-level directory is its own Cargo package, complete with its own `Cargo.toml` file and `src/main.rs`.
 
-```
+
 RUST_LEARNING/
 ├── branches/             # Project demonstrating conditional logic
-│   └── Cargo.toml
 │   └── src/main.rs
 ├── guessing_game/        # Interactive guessing game
-│   └── Cargo.toml
 │   └── src/main.rs
 ├── hello_cargo/          # Basic Cargo project
-│   └── Cargo.toml
 │   └── src/main.rs
 ├── hello_world/          # First Rust program
-│   └── Cargo.toml
 │   └── src/main.rs
 ├── loops/                # Project demonstrating different loop types
-│   └── Cargo.toml
+│   └── src/main.rs
+├── practice/             # General practice exercises
 │   └── src/main.rs
 └── variables/            # Project demonstrating variable concepts
-    └── Cargo.toml
     └── src/main.rs
-```
+
 
 This structure allows each example to be self-contained and runnable independently, making it easy to navigate and focus on specific concepts without interference from other projects.
 
 ---
-
 ## 🚀 Getting Started
 
 To run any of the examples in this repository, you'll need to have the Rust toolchain installed.
@@ -116,719 +113,68 @@ To run any of the examples in this repository, you'll need to have the Rust tool
 *   **Rust Toolchain**:
     *   Install `rustup` (Rust installer) by following the instructions on the [official Rust website](https://www.rust-lang.org/tools/install).
     *   Ensure you have a recent version of Rust. You can check your version with:
-        ```bash
+        bash
         rustc --version
         cargo --version
-        ```
+        
     *   This repository uses the 2024 Edition, which requires a relatively recent Rust compiler. `rustup update` will ensure you have the latest stable toolchain.
 
 ### Installation
 
 1.  **Clone the repository**:
-    ```bash
+    bash
     git clone https://github.com/kaihere14/RUST_LEARNING.git
     cd RUST_LEARNING
-    ```
+    
 
 2.  **Navigate to a specific project**:
     Each example is a separate Cargo project. To work with one, `cd` into its directory. For example:
-    ```bash
+    bash
     cd guessing_game
-    ```
+    
 
 ### Configuration
 
 These examples are simple and generally do not require any specific configuration beyond the default Cargo settings. If an example needed environment variables or configuration files, they would be documented within that project's specific section.
 
 ---
-
 ## 💡 Usage
 
 To run any of the examples, navigate into its directory and use `cargo run`.
 
-Here are commands for each project:
-
 ### Running `hello_world`
 
-```bash
+bash
 cd hello_world
 cargo run
-```
-**Expected Output**:
-```
-Hello, world!
-```
 
-### Running `hello_cargo`
-
-```bash
-cd hello_cargo
-cargo run
-```
 **Expected Output**:
-```
+
 Hello, world!
-```
+
 
 ### Running `variables`
 
-```bash
+bash
 cd variables
 cargo run
-```
-**Expected Output**: (Output will demonstrate variable values, mutability, and shadowing)
-```
+
+**Expected Output**: (Demonstrates variable values, mutability, and shadowing)
+
 The value of x is: 5
 The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is: 6
-The value of x is:
+...
+
+
+### Running `guessing_game`
+
+bash
+cd guessing_game
+cargo run
+
+
+### Running `practice`
+
+bash
+cd practice
+cargo run
