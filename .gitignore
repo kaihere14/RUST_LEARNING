@@ -4,3 +4,8 @@ target/
 # Optional: Ignore other common temporary files
 **/*.rs.bk
 Cargo.lock
+
+
+# Added by cargo
+
+/target
