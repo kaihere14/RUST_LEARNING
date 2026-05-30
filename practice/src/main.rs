@@ -1,16 +1,15 @@
-fn main() {
-    let str = String::from("Hello world");
-    let word = get_first_word(str);
-    println!("{}", word);
-}
+fn main(){
+    let st:&'static str  = "arman";
+    let length:usize   = st.len();
+    println!("hello from rust your number is : {length} and string is {st}");
 
-fn get_first_word(str: String) -> String {
-    let mut word = String::new();
-    for i in str.chars() {
-        word.push(i);
-        if i == ' ' {
-            break;
+    if length <= 5 {
+        for i in 0..length{
+            println!("your current number is {i} and char at that index is {st}")
         }
+        println!("The length is 5 or under")
+    }else {
+        println!("Its not under 5")
     }
-    return word;
+    
 }
