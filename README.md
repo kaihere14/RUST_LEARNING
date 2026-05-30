@@ -1,3 +1,4 @@
+
 # RUST_LEARNING
 
 A collection of beginner-friendly Rust examples demonstrating core programming concepts through practical, self-contained projects.
@@ -57,24 +58,22 @@ rustup update
 ## ▶️ Usage
 
 1. Clone the repository:
-```bash
+bash
 git clone https://github.com/kaihere14/RUST_LEARNING.git
 cd RUST_LEARNING
-```
+
 
 2. Run a project:
-```bash
+bash
 cd <project_name>
 cargo run
-```
+
 
 **Example Outputs**:
 - `hello_world`: `Hello, world!`
 - `variables`: Demonstrates variable binding, mutability, and shadowing
 - `guessing_game`: Interactive number guessing game with input validation
-
----
-
+- `practice`: Demonstrates string length checking, conditional branching, and looping through indices
 ## 📦 Dependencies
 
 - `rand` crate (v0.8.5) used in the guessing game for random number generation
