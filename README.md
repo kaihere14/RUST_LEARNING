@@ -24,7 +24,7 @@ This repository provides hands-on demonstrations of:
 
 Each directory contains a standalone Cargo project:
 
-```
+
 RUST_LEARNING/
 ├── hello_world/       # Simplest Rust program
 ├── hello_cargo/       # Cargo-based project setup
@@ -32,8 +32,9 @@ RUST_LEARNING/
 ├── branches/          # Conditional logic (if/else)
 ├── loops/             # Loop constructs (loop, while, for)
 ├── guessing_game/     # Interactive game with I/O and rand
+├── first_word/        # Extract the first word from a string
 └── practice/          # General coding exercises
-```
+
 
 All projects include:
 - `Cargo.toml` manifest file
@@ -41,7 +42,6 @@ All projects include:
 - Runnable examples with clear outputs
 
 ---
-
 ## 🛠️ Requirements
 
 - Rust 2024 Edition (requires Rust 1.75+)
