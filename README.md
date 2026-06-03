@@ -32,8 +32,8 @@ RUST_LEARNING/
 ├── first_word/              # String manipulation and ownership
 ├── practice/                # General coding exercises
 ├── structs/                 # Struct definition and instantiation
-└── struct_implementation/   # Implementing methods on structs (impl block)
-
+├── struct_implementation/   # Implementing methods on structs (impl block)
+└── enums/                   # Enum definitions and pattern matching
 ## 🛠️ Requirements
 
 - Rust 2024 Edition (Rust 1.75+)
