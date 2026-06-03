@@ -3,7 +3,7 @@
 
 A curated collection of beginner-friendly Rust examples demonstrating core programming concepts through practical, self-contained Cargo projects.
 
-![Rust Logo](https://raw.githubusercontent.com/rust-lang/rust/master/src/doc/logos/rust-logo-blk.svg)  
+![Rust Logo](https://icons.veryicon.com/png/o/business/vscode-program-item-icon/rust-1.png)  
 [License](LICENSE) | [Commits](https://github.com/kaihere14/RUST_LEARNING/commits/main) | [Rust 2024 Edition](https://blog.rust-lang.org/2024/02/08/Rust-2024-Edition.html)
 
 ---
