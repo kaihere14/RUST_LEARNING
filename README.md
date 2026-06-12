@@ -1,3 +1,4 @@
+
 # Rust Learning Projects
 
 A curated collection of beginner-friendly Rust examples demonstrating core programming concepts through practical, self-contained Cargo projects.
@@ -28,10 +29,12 @@ Each directory contains a complete Cargo project with:
 - String manipulation and ownership (`first_word`)
 - Structs and methods (`structs`, `struct_implementation`)
 - Enums and pattern matching (`enums`)
+- Collections and key-value maps (`hashmap`)
+- Error handling and file reading (`error_handling`)
+- Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
 
 ---
-
 ## 🛠️ Requirements
 
 - Rust 2024 Edition (Rust 1.75+)
