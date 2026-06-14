@@ -1,5 +1,5 @@
 
-# Rust Learning Projects
+# 🦀 Rust Learning Projects
 
 A curated collection of beginner-friendly Rust examples demonstrating core programming concepts through practical, self-contained Cargo projects.
 
@@ -7,7 +7,6 @@ A curated collection of beginner-friendly Rust examples demonstrating core progr
 [License](LICENSE) | [Commits](https://github.com/kaihere14/RUST_LEARNING/commits/main) | [Rust 2024 Edition](https://blog.rust-lang.org/2024/02/08/Rust-2024-Edition.html)
 
 ---
-
 ## 📌 Overview
 
 This repository provides hands-on Rust learning material through 8 standalone projects, each focusing on specific programming concepts. All examples follow Rust 2024 Edition guidelines and include complete Cargo project structures with clear documentation.
@@ -32,6 +31,7 @@ Each directory contains a complete Cargo project with:
 - Collections and key-value maps (`hashmap`)
 - Error handling and file reading (`error_handling`)
 - Generics and trait bounds (`Generics`)
+- Traits and shared behavior (`traits`)
 - Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
 
