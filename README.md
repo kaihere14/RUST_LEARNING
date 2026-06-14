@@ -31,6 +31,7 @@ Each directory contains a complete Cargo project with:
 - Enums and pattern matching (`enums`)
 - Collections and key-value maps (`hashmap`)
 - Error handling and file reading (`error_handling`)
+- Generics and trait bounds (`Generics`)
 - Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
 
