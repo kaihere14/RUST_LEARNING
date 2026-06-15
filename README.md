@@ -31,7 +31,7 @@ Each directory contains a complete Cargo project with:
 - Collections and key-value maps (`hashmap`)
 - Error handling and file reading (`error_handling`)
 - Generics and trait bounds (`Generics`)
-- Traits and shared behavior (`traits`)
+- Traits and shared behavior (`traits`, including a CLI Task Manager under `traits/cli-task-manager`)
 - Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
 
@@ -52,16 +52,16 @@ rustup update
 ## ▶️ Usage
 
 1. Clone the repository:
-```bash
+bash
 git clone https://github.com/kaihere14/RUST_LEARNING.git
 cd RUST_LEARNING
-```
+
 
 2. Run a project:
-```bash
+bash
 cd <project_name>
 cargo run
-```
+
 
 **Example Outputs**:
 - `hello_world`: `Hello, world!`
@@ -69,15 +69,23 @@ cargo run
 - `guessing_game`: Interactive number guessing game with input validation
 - `structs`: Prints user details using a custom struct
 - `struct_implementation`: Calculates area of shapes using struct methods (`impl` block)
+- `cli-task-manager` (under `traits/`): Command-line task manager using subcommands to add, list, complete, and delete tasks.
+  bash
+  cargo run -- add "Buy groceries"
+  cargo run -- list
+  cargo run -- done 1
+  cargo run -- delete 1
+  
 
 ---
-
 ## 📦 Dependencies
 
 - `rand` crate (v0.8.5) for random number generation in the guessing game
+- `clap` crate for command-line argument parsing with subcommands in `cli-task-manager`
+- `serde` and `serde_json` crates for task serialization/deserialization in `cli-task-manager`
+- `thiserror` crate for custom error handling in `cli-task-manager`
 
 ---
-
 ## 📝 Contributing
 
 This repository welcomes contributions that:
