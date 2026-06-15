@@ -31,7 +31,8 @@ Each directory contains a complete Cargo project with:
 - Collections and key-value maps (`hashmap`)
 - Error handling and file reading (`error_handling`)
 - Generics and trait bounds (`Generics`)
-- Traits and shared behavior (`traits`, including a CLI Task Manager under `traits/cli-task-manager`)
+- Traits and shared behavior (`traits`)
+- Command-line task manager with task management features (`cli-task-manager`)
 - Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
 
@@ -69,7 +70,7 @@ cargo run
 - `guessing_game`: Interactive number guessing game with input validation
 - `structs`: Prints user details using a custom struct
 - `struct_implementation`: Calculates area of shapes using struct methods (`impl` block)
-- `cli-task-manager` (under `traits/`): Command-line task manager using subcommands to add, list, complete, and delete tasks.
+- `cli-task-manager`: Command-line task manager using subcommands to add, list, complete, and delete tasks.
   bash
   cargo run -- add "Buy groceries"
   cargo run -- list
