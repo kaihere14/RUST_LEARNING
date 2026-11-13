@@ -35,6 +35,7 @@ Each directory contains a complete Cargo project with:
 - Command-line task manager with task management features (`cli-task-manager`)
 - Web server implementation with Actix Web (`web_server`)
 - General practice (`practice`)
+- Concept revision (`revision`)
 
 ---
 ## 🛠️ Requirements
